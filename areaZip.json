@@ -1,0 +1,757 @@
+{
+    "area": [
+        {
+            "areaCode": "01",
+            "zipCode": "0970000"
+        },
+        {
+            "areaCode": "02",
+            "zipCode": "0980000"
+        },
+        {
+            "areaCode": "03",
+            "zipCode": "0980100"
+        },
+        {
+            "areaCode": "04",
+            "zipCode": "0960000"
+        },
+        {
+            "areaCode": "05",
+            "zipCode": "0790000"
+        },
+        {
+            "areaCode": "06",
+            "zipCode": "0770000"
+        },
+        {
+            "areaCode": "07",
+            "zipCode": "0780000"
+        },
+        {
+            "areaCode": "08",
+            "zipCode": "0740000"
+        },
+        {
+            "areaCode": "09",
+            "zipCode": "0610000"
+        },
+        {
+            "areaCode": "0A",
+            "zipCode": "0611000"
+        },
+        {
+            "areaCode": "0B",
+            "zipCode": "0619000"
+        },
+        {
+            "areaCode": "0C",
+            "zipCode": "0740000"
+        },
+        {
+            "areaCode": "0D",
+            "zipCode": "0790000"
+        },
+        {
+            "areaCode": "0E",
+            "zipCode": "0730000"
+        },
+        {
+            "areaCode": "0F",
+            "zipCode": "0480000"
+        },
+        {
+            "areaCode": "10",
+            "zipCode": "0481500"
+        },
+        {
+            "areaCode": "11",
+            "zipCode": "0482100"
+        },
+        {
+            "areaCode": "12",
+            "zipCode": "0930000"
+        },
+        {
+            "areaCode": "13",
+            "zipCode": "0900000"
+        },
+        {
+            "areaCode": "14",
+            "zipCode": "0940000"
+        },
+        {
+            "areaCode": "15",
+            "zipCode": "0860000"
+        },
+        {
+            "areaCode": "16",
+            "zipCode": "0870000"
+        },
+        {
+            "areaCode": "17",
+            "zipCode": "0880000"
+        },
+        {
+            "areaCode": "18",
+            "zipCode": "0840000"
+        },
+        {
+            "areaCode": "19",
+            "zipCode": "0850000"
+        },
+        {
+            "areaCode": "1A",
+            "zipCode": "0860000"
+        },
+        {
+            "areaCode": "1B",
+            "zipCode": "0800000"
+        },
+        {
+            "areaCode": "1C",
+            "zipCode": "0810000"
+        },
+        {
+            "areaCode": "1D",
+            "zipCode": "0820000"
+        },
+        {
+            "areaCode": "1E",
+            "zipCode": "0520000"
+        },
+        {
+            "areaCode": "1F",
+            "zipCode": "0530000"
+        },
+        {
+            "areaCode": "20",
+            "zipCode": "0590000"
+        },
+        {
+            "areaCode": "21",
+            "zipCode": "0560000"
+        },
+        {
+            "areaCode": "22",
+            "zipCode": "0570000"
+        },
+        {
+            "areaCode": "23",
+            "zipCode": "0580000"
+        },
+        {
+            "areaCode": "24",
+            "zipCode": "0490000"
+        },
+        {
+            "areaCode": "25",
+            "zipCode": "0410000"
+        },
+        {
+            "areaCode": "26",
+            "zipCode": "0430000"
+        },
+        {
+            "areaCode": "27",
+            "zipCode": "0430000"
+        },
+        {
+            "areaCode": "28",
+            "zipCode": "0430000"
+        },
+        {
+            "areaCode": "29",
+            "zipCode": "0430000"
+        },
+        {
+            "areaCode": "2A",
+            "zipCode": "0300801"
+        },
+        {
+            "areaCode": "2B",
+            "zipCode": "0368001"
+        },
+        {
+            "areaCode": "2C",
+            "zipCode": "0350001"
+        },
+        {
+            "areaCode": "2D",
+            "zipCode": "0310801"
+        },
+        {
+            "areaCode": "2E",
+            "zipCode": "0392401"
+        },
+        {
+            "areaCode": "2F",
+            "zipCode": "0100001"
+        },
+        {
+            "areaCode": "30",
+            "zipCode": "0180101"
+        },
+        {
+            "areaCode": "31",
+            "zipCode": "0191301"
+        },
+        {
+            "areaCode": "32",
+            "zipCode": "0184301"
+        },
+        {
+            "areaCode": "33",
+            "zipCode": "0280101"
+        },
+        {
+            "areaCode": "34",
+            "zipCode": "0250001"
+        },
+        {
+            "areaCode": "35",
+            "zipCode": "0280001"
+        },
+        {
+            "areaCode": "36",
+            "zipCode": "0260001"
+        },
+        {
+            "areaCode": "37",
+            "zipCode": "9890001"
+        },
+        {
+            "areaCode": "38",
+            "zipCode": "9810001"
+        },
+        {
+            "areaCode": "39",
+            "zipCode": "9891301"
+        },
+        {
+            "areaCode": "3A",
+            "zipCode": "9810201"
+        },
+        {
+            "areaCode": "3B",
+            "zipCode": "9900001"
+        },
+        {
+            "areaCode": "3C",
+            "zipCode": "9920001"
+        },
+        {
+            "areaCode": "3D",
+            "zipCode": "9970001"
+        },
+        {
+            "areaCode": "3E",
+            "zipCode": "9600001"
+        },
+        {
+            "areaCode": "3F",
+            "zipCode": "9630001"
+        },
+        {
+            "areaCode": "40",
+            "zipCode": "9610001"
+        },
+        {
+            "areaCode": "41",
+            "zipCode": "9790001"
+        },
+        {
+            "areaCode": "42",
+            "zipCode": "9740001"
+        },
+        {
+            "areaCode": "43",
+            "zipCode": "9650001"
+        },
+        {
+            "areaCode": "44",
+            "zipCode": "9670001"
+        },
+        {
+            "areaCode": "45",
+            "zipCode": "3100001"
+        },
+        {
+            "areaCode": "46",
+            "zipCode": "3020001"
+        },
+        {
+            "areaCode": "47",
+            "zipCode": "3200001"
+        },
+        {
+            "areaCode": "48",
+            "zipCode": "3240001"
+        },
+        {
+            "areaCode": "49",
+            "zipCode": "3700001"
+        },
+        {
+            "areaCode": "4A",
+            "zipCode": "3790001"
+        },
+        {
+            "areaCode": "4B",
+            "zipCode": "3300001"
+        },
+        {
+            "areaCode": "4C",
+            "zipCode": "3600001"
+        },
+        {
+            "areaCode": "4D",
+            "zipCode": "3680001"
+        },
+        {
+            "areaCode": "4E",
+            "zipCode": "1000001"
+        },
+        {
+            "areaCode": "4F",
+            "zipCode": "1830001"
+        },
+        {
+            "areaCode": "50",
+            "zipCode": "1900001"
+        },
+        {
+            "areaCode": "51",
+            "zipCode": "1000101"
+        },
+        {
+            "areaCode": "52",
+            "zipCode": "1000401"
+        },
+        {
+            "areaCode": "53",
+            "zipCode": "1001511"
+        },
+        {
+            "areaCode": "54",
+            "zipCode": "1001101"
+        },
+        {
+            "areaCode": "55",
+            "zipCode": "2600001"
+        },
+        {
+            "areaCode": "56",
+            "zipCode": "2890101"
+        },
+        {
+            "areaCode": "57",
+            "zipCode": "2940001"
+        },
+        {
+            "areaCode": "58",
+            "zipCode": "2100001"
+        },
+        {
+            "areaCode": "59",
+            "zipCode": "2590001"
+        },
+        {
+            "areaCode": "5A",
+            "zipCode": "3800001"
+        },
+        {
+            "areaCode": "5B",
+            "zipCode": "3900001"
+        },
+        {
+            "areaCode": "5C",
+            "zipCode": "3990001"
+        },
+        {
+            "areaCode": "5D",
+            "zipCode": "4000001"
+        },
+        {
+            "areaCode": "5E",
+            "zipCode": "4030001"
+        },
+        {
+            "areaCode": "5F",
+            "zipCode": "4200001"
+        },
+        {
+            "areaCode": "60",
+            "zipCode": "4100001"
+        },
+        {
+            "areaCode": "61",
+            "zipCode": "4110001"
+        },
+        {
+            "areaCode": "62",
+            "zipCode": "4380001"
+        },
+        {
+            "areaCode": "63",
+            "zipCode": "4500001"
+        },
+        {
+            "areaCode": "64",
+            "zipCode": "4420001"
+        },
+        {
+            "areaCode": "65",
+            "zipCode": "5000001"
+        },
+        {
+            "areaCode": "66",
+            "zipCode": "5060001"
+        },
+        {
+            "areaCode": "67",
+            "zipCode": "5100001"
+        },
+        {
+            "areaCode": "68",
+            "zipCode": "5110001"
+        },
+        {
+            "areaCode": "69",
+            "zipCode": "5170001"
+        },
+        {
+            "areaCode": "6A",
+            "zipCode": "9500001"
+        },
+        {
+            "areaCode": "6B",
+            "zipCode": "9400001"
+        },
+        {
+            "areaCode": "6C",
+            "zipCode": "9430001"
+        },
+        {
+            "areaCode": "6D",
+            "zipCode": "9520001"
+        },
+        {
+            "areaCode": "6E",
+            "zipCode": "9300001"
+        },
+        {
+            "areaCode": "6F",
+            "zipCode": "9390001"
+        },
+        {
+            "areaCode": "70",
+            "zipCode": "9220001"
+        },
+        {
+            "areaCode": "71",
+            "zipCode": "9270001"
+        },
+        {
+            "areaCode": "72",
+            "zipCode": "9100001"
+        },
+        {
+            "areaCode": "73",
+            "zipCode": "9190001"
+        },
+        {
+            "areaCode": "74",
+            "zipCode": "5200001"
+        },
+        {
+            "areaCode": "75",
+            "zipCode": "5290001"
+        },
+        {
+            "areaCode": "76",
+            "zipCode": "6000001"
+        },
+        {
+            "areaCode": "77",
+            "zipCode": "6230001"
+        },
+        {
+            "areaCode": "78",
+            "zipCode": "6290001"
+        },
+        {
+            "areaCode": "79",
+            "zipCode": "5300001"
+        },
+        {
+            "areaCode": "7A",
+            "zipCode": "6500001"
+        },
+        {
+            "areaCode": "7B",
+            "zipCode": "6700001"
+        },
+        {
+            "areaCode": "7C",
+            "zipCode": "6560001"
+        },
+        {
+            "areaCode": "7D",
+            "zipCode": "6680001"
+        },
+        {
+            "areaCode": "7E",
+            "zipCode": "6300001"
+        },
+        {
+            "areaCode": "7F",
+            "zipCode": "6370001"
+        },
+        {
+            "areaCode": "80",
+            "zipCode": "6400001"
+        },
+        {
+            "areaCode": "81",
+            "zipCode": "6460001"
+        },
+        {
+            "areaCode": "82",
+            "zipCode": "7000001"
+        },
+        {
+            "areaCode": "83",
+            "zipCode": "7090001"
+        },
+        {
+            "areaCode": "84",
+            "zipCode": "7190001"
+        },
+        {
+            "areaCode": "85",
+            "zipCode": "7300001"
+        },
+        {
+            "areaCode": "86",
+            "zipCode": "7390001"
+        },
+        {
+            "areaCode": "87",
+            "zipCode": "6900001"
+        },
+        {
+            "areaCode": "88",
+            "zipCode": "6970001"
+        },
+        {
+            "areaCode": "89",
+            "zipCode": "6970002"
+        },
+        {
+            "areaCode": "8A",
+            "zipCode": "6800001"
+        },
+        {
+            "areaCode": "8B",
+            "zipCode": "6830001"
+        },
+        {
+            "areaCode": "8C",
+            "zipCode": "7700001"
+        },
+        {
+            "areaCode": "8D",
+            "zipCode": "7790001"
+        },
+        {
+            "areaCode": "8E",
+            "zipCode": "7600001"
+        },
+        {
+            "areaCode": "8F",
+            "zipCode": "7650001"
+        },
+        {
+            "areaCode": "90",
+            "zipCode": "7900001"
+        },
+        {
+            "areaCode": "91",
+            "zipCode": "7990001"
+        },
+        {
+            "areaCode": "92",
+            "zipCode": "7980001"
+        },
+        {
+            "areaCode": "93",
+            "zipCode": "7800001"
+        },
+        {
+            "areaCode": "94",
+            "zipCode": "7810001"
+        },
+        {
+            "areaCode": "95",
+            "zipCode": "7870001"
+        },
+        {
+            "areaCode": "96",
+            "zipCode": "7590001"
+        },
+        {
+            "areaCode": "97",
+            "zipCode": "7540001"
+        },
+        {
+            "areaCode": "98",
+            "zipCode": "7590201"
+        },
+        {
+            "areaCode": "99",
+            "zipCode": "8100001"
+        },
+        {
+            "areaCode": "9A",
+            "zipCode": "8020001"
+        },
+        {
+            "areaCode": "9B",
+            "zipCode": "8200001"
+        },
+        {
+            "areaCode": "9C",
+            "zipCode": "8320001"
+        },
+        {
+            "areaCode": "9D",
+            "zipCode": "8700001"
+        },
+        {
+            "areaCode": "9E",
+            "zipCode": "8790101"
+        },
+        {
+            "areaCode": "9F",
+            "zipCode": "8780001"
+        },
+        {
+            "areaCode": "A0",
+            "zipCode": "8770001"
+        },
+        {
+            "areaCode": "A1",
+            "zipCode": "8500001"
+        },
+        {
+            "areaCode": "A2",
+            "zipCode": "8570001"
+        },
+        {
+            "areaCode": "A3",
+            "zipCode": "8170001"
+        },
+        {
+            "areaCode": "A4",
+            "zipCode": "8110001"
+        },
+        {
+            "areaCode": "A5",
+            "zipCode": "8530001"
+        },
+        {
+            "areaCode": "A6",
+            "zipCode": "8400001"
+        },
+        {
+            "areaCode": "A7",
+            "zipCode": "8470001"
+        },
+        {
+            "areaCode": "A8",
+            "zipCode": "8600001"
+        },
+        {
+            "areaCode": "A9",
+            "zipCode": "8691401"
+        },
+        {
+            "areaCode": "AA",
+            "zipCode": "8693601"
+        },
+        {
+            "areaCode": "AB",
+            "zipCode": "8680001"
+        },
+        {
+            "areaCode": "AC",
+            "zipCode": "8800001"
+        },
+        {
+            "areaCode": "AD",
+            "zipCode": "8890001"
+        },
+        {
+            "areaCode": "AE",
+            "zipCode": "8820001"
+        },
+        {
+            "areaCode": "AF",
+            "zipCode": "8830001"
+        },
+        {
+            "areaCode": "B0",
+            "zipCode": "8900001"
+        },
+        {
+            "areaCode": "B1",
+            "zipCode": "8998101"
+        },
+        {
+            "areaCode": "B2",
+            "zipCode": "8913101"
+        },
+        {
+            "areaCode": "B3",
+            "zipCode": "8914201"
+        },
+        {
+            "areaCode": "B4",
+            "zipCode": "8940001"
+        },
+        {
+            "areaCode": "B5",
+            "zipCode": "8943101"
+        },
+        {
+            "areaCode": "B6",
+            "zipCode": "9000001"
+        },
+        {
+            "areaCode": "B7",
+            "zipCode": "9050001"
+        },
+        {
+            "areaCode": "B8",
+            "zipCode": "9013101"
+        },
+        {
+            "areaCode": "B9",
+            "zipCode": "9013801"
+        },
+        {
+            "areaCode": "BA",
+            "zipCode": "9060001"
+        },
+        {
+            "areaCode": "BB",
+            "zipCode": "9070001"
+        },
+        {
+            "areaCode": "BC",
+            "zipCode": "9071801"
+        }
+    ]
+}
+
