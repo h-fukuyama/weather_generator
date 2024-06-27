@@ -1,6 +1,6 @@
 //メイン実行関数。対応表の読み込み, APIリクエスト実行, datファイル生成
 
-import * as func from './weatherConverter.mjs';
+import * as func from './helperFunction.mjs';
 import fs from 'fs';
 import env from 'dotenv';
 env.config();

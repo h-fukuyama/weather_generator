@@ -1,6 +1,6 @@
 //syuukan.datファイルを生成するために必要なモジュール
 
-import * as func from './weatherConverter.mjs';
+import * as func from './helperFunction.mjs';
 import axios from 'axios';
 import moment from 'moment';
 

@@ -1,4 +1,7 @@
+//ヘルパー関数
+import fs from 'fs';
 
+//weekDataGeneratorでweather_cdを読み込みアプリの形式に合わせる
 export const weatherConverter = (weatherList) => {
     weatherList.forEach(day => { //https://weather.yukigesho.com/code.htmlの記事を参考にweather_cdを５分割
         if (day.weather_cd == 100) { //100: 晴れ
@@ -19,22 +22,21 @@ export const weatherConverter = (weatherList) => {
     return weatherList;
 }
 
-
-
+//hourDataGeneratorでweather_cdを読み込みアプリの形式に合わせる
 export const hourWeatherConverter = (weatherList) => {
-    const convertedList = weatherList.map(hour => {
-        if (hour == 2) {
-            return hour='3';
-        } else if (hour == 3) {
-            return hour='4';
+    const convertedList = weatherList.map(weather_cd => {
+        if (weather_cd == 2) {
+            return weather_cd = '3';
+        } else if (weather_cd == 3) {
+            return weather_cd = '4';
         } else {
-            return hour;
+            return weather_cd;
         }
     });
     return convertedList;
 }
 
-
+//入力値をアルファベットが大文字、2桁0詰めの16進数に変換する
 export const hexConverter = (value) => {
     let hex = value.toString(16).toUpperCase();
     if (hex.length === 1) {
@@ -43,18 +45,19 @@ export const hexConverter = (value) => {
     return hex;
 }
 
+//配列の要素のXORの１の補数を返す(全datファイルに必要)
 export const generateBCC = (array) => {
-        let xorResult = 0; // XORの初期値は0とする
-        for (let value of array) {  // 配列の全ての値をXOR演算
-            xorResult ^= parseInt(value,16);
-        }
-        // ビットを反転させる,(0xFF(8bit)でマスク)
-        const complement = ~xorResult & 0xFF;
-    
-        return complement.toString(16).toUpperCase();;
+    let xorResult = 0; // XORの初期値は0とする
+    for (let value of array) {  // 配列の全ての値をXOR演算
+        xorResult ^= parseInt(value, 16);
+    }
+    // ビットを反転させる,(0xFF(8bit)でマスク)
+    const complement = ~xorResult & 0xFF;
+
+    return complement.toString(16).toUpperCase();;
 }
 
-import fs from 'fs';
+//ファイルを生成する
 export const createFile = (path) => {
     // ファイルを作成または初期化する
     fs.writeFile(path, '', (err) => {
@@ -65,6 +68,7 @@ export const createFile = (path) => {
     });
 }
 
+//生成されているファイルに追記する
 export const appendDataToFile = (filePath, dataArray) => {
     // 配列をスペースで区切られた文字列に変換
     const dataString = dataArray.join(' ');
@@ -74,11 +78,11 @@ export const appendDataToFile = (filePath, dataArray) => {
         if (err) {
             console.error('Error writing to file', err);
         } else {
-            // console.log('Data successfully appended to file');
         }
     });
 };
 
+//現在のYYYYMMDDのString型を生成する
 export const createYYYYMMDD = () => {
     const today = new Date();
     const month = ('0' + (today.getMonth() + 1)).slice(-2);
@@ -86,6 +90,7 @@ export const createYYYYMMDD = () => {
     return today.getFullYear().toString() + month + day;
 }
 
+//現在のYYYYMMDDHHのString型を生成する
 export const createYYYYMMDDHH = () => {
     const today = new Date();
     const month = ('0' + (today.getMonth() + 1)).slice(-2);
@@ -94,14 +99,7 @@ export const createYYYYMMDDHH = () => {
     return today.getFullYear().toString() + month + day + hour;
 }
 
-export const createDateFromYYYYMMDDHH = (yyyymmddhh) => {
-    const year = parseInt(yyyymmddhh.substring(0, 4));
-    const month = parseInt(yyyymmddhh.substring(4, 6)) - 1; // JavaScriptの月は0から始まる
-    const day = parseInt(yyyymmddhh.substring(6, 8));
-    const hour = parseInt(yyyymmddhh.substring(8, 10));
-    return new Date(year, month, day, hour);
-}
-
+//Date型の入力値をYYYYMMDDHHのString型に修正する
 export const formatDateToYYYYMMDDHH = (date) => {
     const year = date.getFullYear();
     const month = ('0' + (date.getMonth() + 1)).slice(-2); // 月は0から始まるので+1
@@ -110,22 +108,19 @@ export const formatDateToYYYYMMDDHH = (date) => {
     return `${year}${month}${day}${hour}`;
 }
 
+//String型のYYYYMMDDをDate型に戻して日付計算を行い、再びString型に変換する
 export const addDaysToDate = (dateString, days) => {
     // 日付文字列を年、月、日に分割
     const year = parseInt(dateString.slice(0, 4), 10);
     const month = parseInt(dateString.slice(4, 6), 10) - 1; // 月は0から始まるため -1
     const day = parseInt(dateString.slice(6, 8), 10);
-  
-    // Dateオブジェクトを作成
-    const date = new Date(year, month, day);
-  
-    // 日付に日数を加算
-    date.setDate(date.getDate() + days);
-  
+
+    const date = new Date(year, month, day); // Dateオブジェクトを作成
+    date.setDate(date.getDate() + days); // 日付に日数を加算
+
     // 新しい日付をYYYYMMDD形式に変換
     const newYear = date.getFullYear();
     const newMonth = ('0' + (date.getMonth() + 1)).slice(-2); // 月は0から始まるため +1
     const newDay = ('0' + date.getDate()).slice(-2);
-  
     return `${newYear}${newMonth}${newDay}`;
-  }
+}

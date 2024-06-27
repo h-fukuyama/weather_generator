@@ -1,6 +1,6 @@
 //kion.datファイルを生成するためのモジュール、天気データはweekDataGeneratorで取得したものを使用。
 
-import * as func from './weatherConverter.mjs';
+import * as func from './helperFunction.mjs';
 
 //weatherList[0]の今日,またはweatherList[1]の明日,のmax_temperatureとmin_temperatureを使用
 export const temperatureDataGenerator = (weatherList, areaCode) => {
