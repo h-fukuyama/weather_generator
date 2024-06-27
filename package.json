@@ -2,7 +2,7 @@
   "name": "fukuyama",
   "version": "1.0.0",
   "description": "test",
-  "main": "index.js",
+  "main": "jsonReader.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
