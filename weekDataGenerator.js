@@ -2,6 +2,7 @@
 
 import * as func from './helperFunction.mjs';
 import axios from 'axios';
+import { response } from 'express';
 import moment from 'moment';
 
 //1. 8日分のmode=dayデータを取得するためのパラメーター生成
@@ -31,14 +32,19 @@ export const fetchAndExtractWeekData = async (baseURL, headers, paramsDay) => {
         for (let currentDate = startDate; currentDate <= endDate; currentDate.add(1, 'days')) {
             const date = currentDate.format("YYYYMMDD");
             const dayData = weekWeatherData[date];
-            const weatherItem = dayData ? {
-                weather_cd: dayData.weather_cd,
-                max_temperature: dayData.max_temperature,
-                min_temperature: dayData.min_temperature
-            } : { //API上に情報がない場合はNo dataをpushする
-                weather_cd: 'No data',
-                max_temperature: 'No data',
-                min_temperature: 'No data'
+            // console.log(await getWeatherCodeFromHour(baseURL, headers, paramsDay.zip, date));
+            let weatherItem;
+            if (dayData) {
+                weatherItem = {
+                    weather_cd: dayData.weather_cd,
+                    max_temperature: dayData.max_temperature,
+                    min_temperature: dayData.min_temperature
+                };
+            } else { //API上に情報がない場合はNo dataをpushする
+                // weather_cd: 'No data',
+                // max_temperature: 'No data',
+                // min_temperature: 'No data'
+                weatherItem = await getWeatherCodeFromHour(baseURL, headers, paramsDay.zip, date);
             };
             weatherList.push(weatherItem);
         }
@@ -60,6 +66,39 @@ export const fetchAndExtractWeekData = async (baseURL, headers, paramsDay) => {
         return weatherList; // エラーが発生した場合のデフォルト値のリスト
     }
 };
+
+//2.5 API上に情報が無かった場合(12時までの7日後予報)はmode=hourでだけを取得する
+async function getWeatherCodeFromHour (baseURL, headers, zipCode, date) {
+    const hourParams = { 
+        area: '',
+        zip: zipCode, //string型
+        mode: 'hour',
+        from: date + '00', //string型
+        to: date + '00'
+    };
+
+    try {
+        const responseHour = await axios.get(baseURL, { params: hourParams, headers });
+        const hourData = responseHour.data.data[date+'00'];
+
+        return hourData ? {
+            weather_cd: hourData.weather_cd,
+            max_temperature: 'No Data',
+            min_temperature: 'No Data',
+        } : {
+            weather_cd: 'No data',
+            max_temperature: 'No data',
+            min_temperature: 'No data',
+        };
+    } catch (e) {
+        console.error('Error fetching hour weather data:', e);
+        return {
+            weather_cd: 'No data',
+            max_temperature: 'No data',
+            min_temperature: 'No data'
+        };
+    }
+}
 
 //3. syuukan.datファイルの生成
 export const weekDataGenerator = (weatherList, areaCode) => {

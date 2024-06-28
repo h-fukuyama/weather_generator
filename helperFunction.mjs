@@ -15,8 +15,7 @@ export const weatherConverter = (weatherList) => {
         } else if (day.weather_cd >= 400 && day.weather_cd <= 450) { //400~450: 雪
             day.weather_cd = '5';
         } else {
-            // console.log(day.weather_cd);
-            return 'Error';
+            hourWeatherConverter(day);
         }
     })
     return weatherList;
@@ -25,10 +24,12 @@ export const weatherConverter = (weatherList) => {
 //hourDataGeneratorでweather_cdを読み込みアプリの形式に合わせる
 export const hourWeatherConverter = (weatherList) => {
     const convertedList = weatherList.map(weather_cd => {
-        if (weather_cd == 2) {
-            return weather_cd = '3';
-        } else if (weather_cd == 3) {
-            return weather_cd = '4';
+        if (weather_cd == 2) {//仕様書では2がくもり
+            return weather_cd = '3'; //USEN側では3がくもり
+        } else if (weather_cd == 3) { //仕様書では3が雨
+            return weather_cd = '4'; //USEN側では4が雨
+        } else if (weather_cd == 4) {//仕様書では4が雪
+            return weather_cd = '5'; //USEN側では5が雪
         } else {
             return weather_cd;
         }
