@@ -14,9 +14,17 @@ export const weatherConverter = (weatherList) => {
             day.weather_cd = '4';
         } else if (day.weather_cd >= 400 && day.weather_cd <= 450) { //400~450: 雪
             day.weather_cd = '5';
+        } else if (day.weather_cd == 1) { //仕様書では3が雨
+            day.weather_cd = '1'; //USEN側では4が雨
+        } else if (day.weather_cd == 2) {//仕様書では4が雪
+            day.weather_cd = '3'; //USEN側では5が雪
+        } else if (day.weather_cd == 3) { //仕様書では3が雨
+            day.weather_cd = '4'; //USEN側では4が雨
+        } else if (day.weather_cd == 4) {//仕様書では4が雪
+            day.weather_cd = '5'; //USEN側では5が雪
         } else {
-            hourWeatherConverter(day);
-        }
+            day.weather_cd = '不明';
+        };
     })
     return weatherList;
 }

@@ -13,6 +13,7 @@ import { fetchAndExtractRainyData, rainyDataGenerator, concatRainyList } from '.
 
 const start = performance.now(); //実行時間記録用変数
 const baseURL = process.env.BASE_URL; //APIのホストURL
+const outputDir = process.env.OUTPUT_DIR; //完成ファイルの転送先
 const headers = { 'x-api-key': process.env.API_KEY }; //headersに必要な変数(U members IDはoptionalだったため省略)
 
 //ファイルの生成
@@ -29,7 +30,7 @@ fs.readFile(process.env.ZIP_CODE_DATA_PATH, 'utf8', async (err, jsonString) => {
         for (const area of data.area) { //area.areaCode, area.zipCode
 
             //APIパラメータに含める日付/時間のリストを現在の時間を元に生成
-            const paramsDay = generateParamsDay(area) //今日から７日後のmode=dayの天気を取得するためのパラメータfrom,to
+            const paramsDay = generateParamsDay(area) //今日から７日後までのmode=dayの天気を取得するためのパラメータfrom,to
             const hoursList = hoursListGenerator(); //3,6,9,12,24,36,48時間後のYYYYMMDDHHリスト
             const rainyHoursList = concatRainyList(); //今日,明日の0,6,12,18時のYYYYMMDDHHリスト
 
@@ -45,11 +46,18 @@ fs.readFile(process.env.ZIP_CODE_DATA_PATH, 'utf8', async (err, jsonString) => {
                 temperatureDataGenerator(weekList, area.areaCode); //kion.dat生成(03)
                 rainyDataGenerator(rainyList, area.areaCode); //kousui.dat生成(05)
 
-            } catch (error) { //天気データ取得～datファイル生成まででのエラー時の処理
-                console.error('Error fetching the data:', error);
-            }
+            } catch (error) { console.error('Error fetching the data:', error); } //天気データ取得～datファイル生成まででのエラー時の処理    
         }
+        // 生成されたファイルを別のフォルダに転送
+        try {
+            await Promise.all(filePaths.map(async (path) => {
+                const fileName = path.split('/').pop();
+                const destPath = `${outputDir}/${fileName}`;
+                await fs.promises.rename(path, destPath);
+            }));
+        } catch (error) { console.error('Error moving files:', error); }
     } catch (err) { console.error('Error parsing JSON:', err); } //対応表のparse時に起きたエラーの処理
+
     const end = performance.now(); //実行時間計測用変数
     const duration = (end - start) / 1000; //実行時間計測用変数
     console.log(`Execution time: ${duration.toFixed(3)} seconds`);

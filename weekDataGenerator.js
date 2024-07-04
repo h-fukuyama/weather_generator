@@ -67,7 +67,7 @@ export const fetchAndExtractWeekData = async (baseURL, headers, paramsDay) => {
     }
 };
 
-//2.5 API上に情報が無かった場合(12時までの7日後予報)はmode=hourでだけを取得する
+//2.5 API上に情報が無かった場合(12時までの7日後予報)はmode=hourで7日後0時のweather_cdだけを取得する
 async function getWeatherCodeFromHour (baseURL, headers, zipCode, date) {
     const hourParams = { 
         area: '',
